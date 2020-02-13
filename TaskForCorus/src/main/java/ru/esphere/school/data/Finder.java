@@ -19,9 +19,12 @@ public class Finder {
 
         groups.stream().forEach(r -> r.getMembers().stream().filter(x -> x.getAge()>targetAge).forEach(
                 x -> groupsNames.add(x.getName())));
-        System.out.println(groupsNames); //для наглядости
+        System.out.println(groupsNames); //для наглядности
         return groupsNames;
     }
 
-
+	/*
+		Первый forEach (.forEach(r -> r.getMembers()...) - это внешний цикл;
+		Дальше внутренний цикл с проверкой условия для каждой возращенной коллекции (List<Member>)
+	*/
 }
